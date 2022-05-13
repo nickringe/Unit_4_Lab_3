@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class DVD extends Movie {
+	
+	@Override
+	public void play() {
+		System.out.println("What scene would you like to watch?");
+		printScenes();
+		Scanner scnr = new Scanner(System.in);
+		int userChoice = scnr.nextInt();
+		System.out.println(getScenes().get(userChoice));
+		scnr.close();
+	}
+
+	@Override
+	public String toString() {
+		return "DVD [getTitle()=" + getTitle() + ", getRunTime()=" + getRunTime() + ", getScenes()=" + getScenes()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
+	}
+	
+	
+
+}

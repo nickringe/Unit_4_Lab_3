@@ -1,0 +1,16 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+
+import org.junit.jupiter.api.Test;
+
+class BlockbusterTestCases {
+
+	@Test
+	void createDVDtest() {
+		ArrayList<String> scenes = new ArrayList<>();
+		DVD testDVD = new DVD("TestMovie", 100, scenes);
+		assertNotNull(testDVD);
+	}
+
+}

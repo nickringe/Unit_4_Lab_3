@@ -1,0 +1,14 @@
+
+public class VHS extends Movie {
+
+	private int currentTime = 0;
+	
+	public void play() {
+	System.out.println("hey");
+	this.currentTime = currentTime++;
+}
+	public void rewind() {
+		this.currentTime = 0;
+	}
+
+}

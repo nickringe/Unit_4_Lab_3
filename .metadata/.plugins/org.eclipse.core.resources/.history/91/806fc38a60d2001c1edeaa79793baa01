@@ -1,0 +1,40 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class DVD extends Movie {
+	
+	public DVD() {
+		
+	}
+	
+	public DVD(String title, int runTime, ArrayList<String> scenes) {
+		super(title, runTime, scenes);
+	}
+	
+	
+	public void play(int a, ArrayList<String> b) {
+	System.out.println(b.get(a));
+	if (a > getScenes().size()) {
+		a = 0;
+	}
+	}
+
+	
+	@Override
+	public void play() {
+		System.out.println("What scene would you like to watch?");
+		printScenes();
+		Scanner scnr = new Scanner(System.in);
+		int userChoice = scnr.nextInt();
+		System.out.println(getScenes().get(userChoice));
+		scnr.close();
+	}
+
+	@Override
+	public String toString() {
+		return "DVD Title: " + getTitle() + ", Run Time: " + getRunTime() + ", Scenes: " + getScenes();
+	}
+	
+	
+
+}

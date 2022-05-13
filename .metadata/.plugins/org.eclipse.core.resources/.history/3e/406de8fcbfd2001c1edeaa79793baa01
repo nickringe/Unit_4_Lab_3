@@ -1,0 +1,34 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+
+import org.junit.jupiter.api.Test;
+
+class BlockbusterTestCases {
+
+	@Test
+	void createDVDtest() {
+		ArrayList<String> scenes = new ArrayList<>();
+		DVD testDVD = new DVD("TestMovie", 100, scenes);
+		assertNotNull(testDVD);
+	}
+	
+	@Test
+	void titleDVDtest() {
+		ArrayList<String> scenes = new ArrayList<>();
+		DVD testDVD = new DVD("TestMovie", 100, scenes);
+		String expected = "TestMovie";
+		String actual = testDVD.getTitle();
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	void runTimeDVDtest() {
+		ArrayList<String> scenes = new ArrayList<>();
+		DVD testDVD = new DVD("TestMovie", 100, scenes);
+		int expected = 100;
+		int actual = testDVD.getRunTime();
+		assertEquals(expected, actual);
+	}
+
+}
